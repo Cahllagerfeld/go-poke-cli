@@ -1,9 +1,7 @@
 package ports
 
-import (
-	core "github.com/cahllagerfeld/go-poke-cli/internal/core/app"
-)
+import "github.com/cahllagerfeld/go-poke-cli/internal/core/domain"
 
-type APIPort interface {
-	GetOne(i int) (*core.PokemonResponse, error)
+type PokemonService interface {
+	Get(id int) (domain.Pokemon, error)
 }
