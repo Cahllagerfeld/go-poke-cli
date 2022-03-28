@@ -5,11 +5,12 @@ import (
 	"strconv"
 
 	pokemonsrv "github.com/cahllagerfeld/go-poke-cli/internal/core/services/pokemon"
+	"github.com/cahllagerfeld/go-poke-cli/internal/ports"
 	"github.com/spf13/cobra"
 )
 
 type Handler struct {
-	pokeService *pokemonsrv.Service
+	pokeService ports.PokemonService
 }
 
 func New(p *pokemonsrv.Service) *Handler {
